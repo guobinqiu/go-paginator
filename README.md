@@ -20,26 +20,21 @@ query := paginator.CreateQuery(<YOUR SQL>, ...CONDS)
 ```
 pagination, err := paginator.Paginate(query, <PAGE>, <PAGE_SIZE>)
 
-// 获取分页信息
+//获取分页信息
 page := pagination.Page //第几页
 pageSize := pagination.PageSize //每页大小
 pageCount := pagination.PageCount //总页数
 rowCount := pagnination.RowCount //总行数
-```
 
-#### 获取所有行
-```
+//获取所有行数据
 rows = pagination.Rows
-```
 
-#### 获取单行
-```
+//获取第一行数据
 row := pagination.RowIndex(0)
-```
 
-#### 以指定类型返回行内的列值
-```
+//以指定类型返回行内列的值
 v, err := row.String(<COLUMN_NAME>)
 v, err := row.Int(<COLUMN_NAME>)
 v, err := row.Float(<COLUMN_NAME>)
 v, err := row.Time(<COLUMN_NAME>)
+```
