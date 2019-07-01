@@ -18,9 +18,10 @@ query := paginator.CreateQuery(<YOUR SQL>, ...CONDS)
 
 ### 4.传入页号及页大小，将返回分页结果对象
 ```
+//返回分页结果
 pagination, err := paginator.Paginate(query, <PAGE>, <PAGE_SIZE>)
 
-//获取分页信息
+//分页信息
 page := pagination.Page //第几页
 pageSize := pagination.PageSize //每页大小
 pageCount := pagination.PageCount //总页数
