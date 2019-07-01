@@ -33,8 +33,8 @@ rows = pagination.Rows
 row := pagination.RowIndex(0)
 
 //以指定类型返回行内列的值
-v, err := row.String(<COLUMN_NAME>)
-v, err := row.Int(<COLUMN_NAME>)
-v, err := row.Float(<COLUMN_NAME>)
-v, err := row.Time(<COLUMN_NAME>)
+v, err := row.String(<COLUMN_NAME>) //as string
+v, err := row.Int(<COLUMN_NAME>) //as int
+v, err := row.Float(<COLUMN_NAME>) //as float64
+v, err := row.Time(<COLUMN_NAME>) //as time.Time
 ```
