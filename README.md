@@ -1,7 +1,7 @@
 DB Paginator
 ===
 
-### 完整样例
+## Sample：
 
 ```
 package main
@@ -44,22 +44,22 @@ func checkErr(err error) {
 }
 ```
 
-### 获得db连接
+### Step1.获得db连接
 ```
 db, err := sql.Open("mysql", <YOUR DSN>)
 ```
 
-### 创建分页对象，传入db连接
+### Step2.创建分页对象，传入db连接
 ```
 paginator := paginator.New(db)
 ```
 
-### 创建查询对象，传入sql查询语句及查询条件
+### Step3.创建查询对象，传入sql查询语句及查询条件
 ```
 query := paginator.CreateQuery(<YOUR SQL>, ...CONDS)
 ```  
 
-### 输入页号及页大小返回分页结果对象
+### Step4.输入页号及页大小返回分页结果对象
 ```
 //返回分页结果对象
 pagination, err := paginator.Paginate(query, <PAGE>, <PAGE_SIZE>)
