@@ -1,7 +1,4 @@
-Paginator
-===
-
-## Sample：
+### Sample
 
 ```
 package main
