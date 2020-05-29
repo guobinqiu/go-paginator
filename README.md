@@ -44,22 +44,22 @@ func checkErr(err error) {
 }
 ```
 
-### Step1.获得db连接
+### 1.获得db连接
 ```
 db, err := sql.Open("mysql", <YOUR DSN>)
 ```
 
-### Step2.创建分页对象，传入db连接
+### 2.创建分页对象，传入db连接
 ```
 paginator := paginator.New(db)
 ```
 
-### Step3.创建查询对象，传入sql查询语句及查询条件
+### 3.创建查询对象，传入sql查询语句及查询条件
 ```
 query := paginator.CreateQuery(<YOUR SQL>, ...CONDS)
 ```  
 
-### Step4.输入页号及页大小返回分页结果对象
+### 4.输入页号及页大小返回分页结果对象
 ```
 //返回分页结果对象
 pagination, err := paginator.Paginate(query, <PAGE>, <PAGE_SIZE>)
