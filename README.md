@@ -1,4 +1,4 @@
-DB Paginator
+Paginator
 ===
 
 ## Sample：
